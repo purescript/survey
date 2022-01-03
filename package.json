@@ -1,0 +1,23 @@
+{
+  "name": "survey",
+  "version": "1.0.0",
+  "description": "Hi all!",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/purescript/survey.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/purescript/survey/issues"
+  },
+  "homepage": "https://github.com/purescript/survey#readme",
+  "devDependencies": {
+    "markdown-toc": "^1.2.0"
+  }
+}
