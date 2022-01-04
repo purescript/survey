@@ -646,7 +646,7 @@ Type: select all that apply (optional)
 - I was using Elm and wanted to go further down the rabbit hole.
 - I was using Idris and wanted to go further up the rabbit hole.
 - I am a Haskeller and am comfortably situated in the rabbit hole but was looking to make a shift to webdev.
-- I am a JS/TS developer and I'm tired of stuff breaking all the time.
+- I am a JS/TS developer and I was interested in the benefits of a strictly-typed functional language that compiles to JS.
 - The tooling is better than most other FP languages.
 - The libraries are better than most other FP languages.
 - I like its compact feature set.
