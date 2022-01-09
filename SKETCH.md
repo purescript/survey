@@ -248,6 +248,7 @@ Type: select all that apply (optional)
 - Using the `purescript` Haskell library directly
 - `purs`
 - `purs-ide` (auto-compilation via an editor)
+- `pscid`
 - `spago`
 - `pulp`
 
@@ -339,6 +340,7 @@ Type: select all that apply (optional)
 
 - `halogen`
 - `react-basic`
+- `react-basic-hooks`
 - `react`
 - `concur`
 
@@ -430,7 +432,7 @@ Type: select all that apply (optional)
 
 Type: select all that apply (optional)
 
-- I don't use current main
+- I don't use any custom fork
 - Out of habit
 - For a particular language feature or set of language features I need
 - I like to have access to all the latest features
@@ -473,6 +475,7 @@ Type: select all that apply (optional)
 - Visual Studio
 - Xcode
 - Atom
+- Kakoune
 - Other (open response)
 
 > **justification**
@@ -647,6 +650,7 @@ Type: select all that apply (optional)
 - I was using Idris and wanted to go further up the rabbit hole.
 - I am a Haskeller and am comfortably situated in the rabbit hole but was looking to make a shift to webdev.
 - I am a JS/TS developer and I was interested in the benefits of a strictly-typed functional language that compiles to JS.
+- I have tried several options and found PureScript is better than the others.
 - The tooling is better than most other FP languages.
 - The libraries are better than most other FP languages.
 - I like its compact feature set.
@@ -1156,8 +1160,8 @@ REPEAT
 Options:
 
 - Much better
-- Better  
-- Remained the same  
+- Better 
+- Remained the same
 - Worse
 - Much worse
 - Unsure
