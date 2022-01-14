@@ -16,7 +16,9 @@
     + [What statement below best describes the way you iterate on PureScript code as you develop?](#what-statement-below-best-describes-the-way-you-iterate-on-purescript-code-as-you-develop)
     + [What frameworks do you use for testing PureScript code?](#what-frameworks-do-you-use-for-testing-purescript-code)
     + [(JS only) What tools do you use for bundling PureScript code?](#js-only-what-tools-do-you-use-for-bundling-purescript-code)
-    + [What community-maintained or otherwise-popular PureScript frameworks do you regularly use?](#what-community-maintained-or-otherwise-popular-purescript-frameworks-do-you-regularly-use)
+    + [What community-maintained or otherwise-popular PureScript _frontend_ frameworks do you regularly use?](#what-community-maintained-or-otherwise-popular-purescript-_frontend_-frameworks-do-you-regularly-use)
+    + [What community-maintained or otherwise-popular PureScript _backend_ frameworks do you regularly use?](#what-community-maintained-or-otherwise-popular-purescript-_backend_-frameworks-do-you-regularly-use)
+    + [What packages, if any, do you use from the FFI (ie react, vue, puppeteer etc)](#what-packages-if-any-do-you-use-from-the-ffi-ie-react-vue-puppeteer-etc)
     + [Which platforms, operating systems or runtimes do you develop PureScript software for?](#which-platforms-operating-systems-or-runtimes-do-you-develop-purescript-software-for)
     + [Which version(s) of PureScript do you use for local development?](#which-versions-of-purescript-do-you-use-for-local-development)
     + [If you use current main, why?](#if-you-use-current-main-why)
@@ -30,7 +32,7 @@
     + [Why did you first start using PureScript?](#why-did-you-first-start-using-purescript)
   * [The PureScript Community](#the-purescript-community)
     + [In which of the following ways have you participated in the PureScript community in the last 6 months:](#in-which-of-the-following-ways-have-you-participated-in-the-purescript-community-in-the-last-6-months)
-    + [Roughly how often do you contribute to the PureScript project?](#roughly-how-often-do-you-contribute-to-the-purescript-project)
+    + [Roughly how often do you contribute to PureScript (language, ecosystem, community, etc)?](#roughly-how-often-do-you-contribute-to-purescript-language-ecosystem-community-etc)
     + [How often have you felt explicitly welcome in the PureScript community?](#how-often-have-you-felt-explicitly-welcome-in-the-purescript-community)
     + [How often have you felt *un*welcome in the PureScript community?](#how-often-have-you-felt-unwelcome-in-the-purescript-community)
     + [If you indicated that you did not feel welcome in the PureScript community, are there any details about your experience that you would like to share with us?](#if-you-indicated-that-you-did-not-feel-welcome-in-the-purescript-community-are-there-any-details-about-your-experience-that-you-would-like-to-share-with-us)
@@ -39,6 +41,7 @@
     + [To what extent is PureScript currently being used by your company?](#to-what-extent-is-purescript-currently-being-used-by-your-company)
     + [Approximately how many total developers does your company employ?](#approximately-how-many-total-developers-does-your-company-employ)
     + [Is your company planning on hiring PureScript developers in the next year?](#is-your-company-planning-on-hiring-purescript-developers-in-the-next-year)
+    + [If you're using PureSCript for web development, which industry does your web app target?](#if-youre-using-purescript-for-web-development-which-industry-does-your-web-app-target)
     + [In what technology domain(s) is PureScript used at your company?](#in-what-technology-domains-is-purescript-used-at-your-company)
     + [Are you using PureScript at work?](#are-you-using-purescript-at-work)
     + [Rate how much the following statements are reasons which your team uses PureScript at work](#rate-how-much-the-following-statements-are-reasons-which-your-team-uses-purescript-at-work)
@@ -185,7 +188,7 @@ Type: select one
 > Useful for cohort analysis, i.e., for other questions we can query if answers are significantly different for beginners vs advanced users.
 >
 > Previously this question was a 1-10 ranking. Having specific labels can help with consistency across responses. Additionally, having 10 choices
-> was too specific (i.e., what's the difference between a 7 and 8?) where as with the new answers, we have a better idea of what the differences 
+> was too specific (i.e., what's the difference between a 7 and 8?) where as with the new answers, we have a better idea of what the differences
 > between answers actually mean.
 
 ### When did you learn to program in PureScript?
@@ -206,7 +209,7 @@ Type: select one (optional)
 > Useful for cohort analysis, i.e., for other questions we can understand if *when* someone learned PureScript impacts their views on things.
 >
 > The time periods used as answers try to reflect the major "epochs"
-> of PureScript history (i.e., pre-0.14, etc) as well as the most 
+> of PureScript history (i.e., pre-0.14, etc) as well as the most
 > recent past. We use whole years even though this doesn't line up
 > perfectly with these epochs. Learning PureScript in early 2020 was
 > likely similar to the experience of learning PureScript post 2019
@@ -218,7 +221,7 @@ Type: select one (optional)
 
 ### Which operating systems do you use regularly for PureScript development?
 
-**Note**: this is specifically about which systems you use for development *not* all the 
+**Note**: this is specifically about which systems you use for development *not* all the
 systems you target.
 
 Type: select all that apply (optional)
@@ -383,7 +386,7 @@ Type: select all that apply (optional)
 
 > **justification**
 >
-> This question can be used to figure out roughly what systems are being targeted as well as 
+> This question can be used to figure out roughly what systems are being targeted as well as
 > what OS stack is being developed against (i.e., desktop/server OS, mobile OS, embedded OS, bare metal)
 >
 > We're using "Linux" here rather than "*nix" or similar, with the same
@@ -406,7 +409,7 @@ Type: select all that apply (optional)
 
 > **justification**
 >
-> Together with the following question, we can better determine what the spread of 
+> Together with the following question, we can better determine what the spread of
 > version usage is across the community.
 
 ### If you use current main, why?
@@ -761,7 +764,7 @@ Choices:
 
 > **justification**
 >
-> We'd like to know where people are feeling unwelcome and the degree to which they are feeling unwelcome. This can 
+> We'd like to know where people are feeling unwelcome and the degree to which they are feeling unwelcome. This can
 > help us better understand the free from responses that will come in the next question.
 
 ### If you indicated that you did not feel welcome in the PureScript community, are there any details about your experience that you would like to share with us?
@@ -769,8 +772,8 @@ Choices:
 Type: free form (optional)
 
 > **justification**
-> 
-> More detail on the type of situations where people have felt unwelcome can let us better 
+>
+> More detail on the type of situations where people have felt unwelcome can let us better
 > address these issues in the future.
 
 
@@ -830,7 +833,7 @@ Type: select one (optional)
 - 1,000-10,000
 - Over 10,000
 
-> This question is not that interesting on its own, but it can be used as a sort of co-hort for understanding how answers 
+> This question is not that interesting on its own, but it can be used as a sort of co-hort for understanding how answers
 > change depending on the size of the development effort at a company.
 >
 > Previously this question used "employees" instead of "developers". It is more appropriate for us to ask about the amount
@@ -1160,7 +1163,7 @@ REPEAT
 Options:
 
 - Much better
-- Better 
+- Better
 - Remained the same
 - Worse
 - Much worse
@@ -1361,7 +1364,7 @@ Type: select all that apply (optional)
 > We want to see generally what tech areas respondents work in. In addition to general categories,
 > we include some technology categories that are known to be popular in the PureScript community.
 > This can help us get more insight into what respondents are working on. For instance, if a respondent
-> answers their employer works in automotive but they are working on mobile phone applications and not 
+> answers their employer works in automotive but they are working on mobile phone applications and not
 > embedded devices, we might conclude different things than if they are working on embedded devices.
 
 ### Excluding PureScript, what is your experience with other kinds of programming languages?
@@ -1470,9 +1473,7 @@ Type: free form (optional)
 
 > **justification**
 >
-> While it's unlikely we'll receive any one piece of feedback from this question that will prove to be super useful, 
+> While it's unlikely we'll receive any one piece of feedback from this question that will prove to be super useful,
 > having it in the survey can still be useful. It can help us decide on new questions or perspectives that we want to
 > try to capture in future surveys. It also gives respondents a place to give thanks or share a particular opinion they
 > hold which can be useful in and of itself.
-
-
