@@ -1447,6 +1447,7 @@ Type: select all that apply (optional)
 - English
 - Hindi
 - Bengali
+- Persian
 - Portuguese
 - Russian
 - Japanese
