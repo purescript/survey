@@ -674,15 +674,15 @@ Note that the following forms of participation do not include code related activ
 
 Type: select all that apply (optional)
 
-- I have produced informational content about PureScript (e.g., blogged, live streamed, made a YouTube video, presented at a conference/meetup, etc.)
-- On several occasions I have consumed informational content about PureScript (e.g., blogs, live streams, YouTube videos, etc.)
+- I have produced informational content about PureScript (e.g., blogged, live streamed, made a YouTube video, presented at a conference/meetup, etc.).
+- On several occasions I have consumed informational content about PureScript (e.g., blogs, live streams, YouTube videos, etc.).
 - I have participated in conversations on the PureScript Discord.
 - I have participated in conversations on the PureScript Discourse.
-- On several occasions I have read comments about PureScript content on "news" sites (e.g., Hacker News, reddit.com/r/purescript, lobste.rs/t/purescript, etc.)
-- On several occasions I have commented on PureScript content on "news" sites (e.g., Hacker News, reddit.com/r/purescript, lobste.rs/t/purescript, etc.)
-- On several occasions I have participated in conversations about PureScript on social media (Twitter, Facebook, LinkedIn, etc.)
-- I have participated in PureScript community forums or chats (e.g., users.purescript-lang.org, PureScript Discord, a local PureScript chat community, etc.)
-- I have attended a PureScript meetup or conference (virtual or in-person)
+- On several occasions I have read comments about PureScript content on "news" sites (e.g., Hacker News, reddit.com/r/purescript, lobste.rs/t/purescript, etc.).
+- On several occasions I have commented on PureScript content on "news" sites (e.g., Hacker News, reddit.com/r/purescript, lobste.rs/t/purescript, etc.).
+- On several occasions I have participated in conversations about PureScript on social media (Twitter, Facebook, LinkedIn, etc.).
+- I have participated in PureScript community forums or chats (e.g., users.purescript-lang.org, PureScript Discord, a local PureScript chat community, etc.).
+- I have attended a PureScript meetup or conference (virtual or in-person).
 
 > **justification**
 >
