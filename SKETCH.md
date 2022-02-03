@@ -198,10 +198,10 @@ Type: select one
 Type: select one (optional)
 
 - I'm still *actively* trying to learn PureScript
-- During 2021
-- During 2019 or 2020
-- During 2017 or 2018
-- During 2015 or 2016
+- During 2021 (0.14.x)
+- During 2019 or 2020 (0.13.x)
+- During 2017 or 2018 (0.11.x, 0.12.x)
+- During 2015 or 2016 (0.7.x, 0.8.x, 0.9.x, 0.10.x)
 - During 2014 or before
 
 > **justification**
@@ -214,14 +214,12 @@ Type: select one (optional)
 > perfectly with these epochs. Learning PureScript in early 2020 was
 > likely similar to the experience of learning PureScript post 2019
 > while before that the language was changing more rapidly. We explicitly
-> use years instead of asking for which PureScript edition someone learned
-> because the former is often much easier for respondents to know.
-> It's also helpful to be more specific than an edition, and it's fairly
-> easy to know which edition someone likely used based on the year they learned PureScript.
+> use years when asking which PureScript version someone learned because
+> the former is often much easier for respondents to know.
 
 ### Which operating systems do you use regularly for PureScript development?
 
-**Note**: this is specifically about which systems you use for development *not* all the
+**Note**: this is specifically about which systems you use for development, *not* all the
 systems you target.
 
 Type: select all that apply (optional)
@@ -229,7 +227,8 @@ Type: select all that apply (optional)
 - Linux
 - Windows
 - Windows Subsystem for Linux
-- Mac OS
+- Mac OS (x86)
+- Mac OS (ARM)
 - Other (open response)
 
 > **justification**
@@ -248,10 +247,9 @@ Type: select all that apply (optional)
 
 Type: select all that apply (optional)
 
-- Using the `purescript` Haskell library directly
 - `purs`
 - `purs-ide` (auto-compilation via an editor)
-- `pscid`
+- `pscid` (auto-compilation on the command line)
 - `spago`
 - `pulp`
 
@@ -268,12 +266,14 @@ Type: matrix (optional)
 Targets:
 
 - JS via `purs`
-- corefn via `purs`
+- CoreFn via `purs`
 - Erlang via `purerl`
 - Go via `purescript-native`
 - C++ via `purescript-native`
+- C via `pure-c`
 - Nix via `purescript-nix`
 - Python via `purescript-python`
+- Scheme via `purescm`
 
 Frequency:
 - More frequently than weekly
@@ -328,10 +328,12 @@ Type: select all that apply (optional)
 
 - `purs`
 - `spago`
+- `pulp`
 - `webpack`
 - `parcel`
 - `rollup`
 - `esbuild`
+- other
 
 > **justification**
 > A lot of discussion is going into bundling, and we need to have a
@@ -485,40 +487,22 @@ Type: select all that apply (optional)
 >
 > It is good to know which editor is the most preferred for PureScript development. This
 > can change investment strategies for further IDE development.
->
-> Note: previously this question included different 'drivers' of the PureScript IDE
-> experience (e.g., racer, rls, purescript-analyzer). Development has consolidated on
-> purescript-analyzer, and so it's not necessary to find out which is being used.
-> If we are curious how far along adoption of purescript-analyzer is, we can ask that
-> in a separate question, though this is likely easier to find out through download
-> numbers.
 
 ### Which debuggers do you use for debugging PureScript programs on a regular basis?
 
 Type: select all that apply (optional)
 
-- Using `purescript-debug` or using `Log` statements
+- `purescript-debug` or using `log` statements
 - `purescript-debugged`
 - Chrome Developer Tools
 - Node Inspector
 - Editor breakpoints or extensions(VSCode, etc)
-- Erlang debugger
-- GDB
-- LLDB
-- Visual Studio
-- WinDBG
 - Other (open response)
-
 
 > **justification**
 >
 > It is good to know how many users use a debugging tool, and which tool they use.
 > This information could influence priorities for the compiler and tools teams.
->
-> Note that there is some overlap between the answers, e.g., VS Code uses either a
-> GDB or LLDB plugin, but I think that is OK, we can take this into account when
-> interpreting the answers and we will get an indication of user's perceptions of
-> their tools.
 
 ### To what extent would you like to see the following compiler issues expediently resolved or implemented?
 
@@ -526,43 +510,37 @@ Type: matrix (optional)
 
 Issue:
 
-- #2437: [Require module names to only be unique per package modules](https://github.com/purescript/purescript/issues/2437)
-- #3493: [Make the compiler package aware modules](https://github.com/purescript/purescript/issues/3493)
-- #4020: [Proposal: Replace data structures with tagged arrays type: enhancement](https://github.com/purescript/purescript/issues/4020)
+- #4227: [Proposal: Remove the PureScript bundler](https://github.com/purescript/purescript/issues/4226)
+- #4227: [Proposal: Remove `language-javascript`](https://github.com/purescript/purescript/issues/4227)
+- #4230: [Proposal: Only support ES modules in PureScript 0.15 (disallow CommonJS)](https://github.com/purescript/purescript/issues/4230)
+- #3613: [Add support for ES modules](https://github.com/purescript/purescript/issues/3613)
+- #2437: [Require module names to only be unique per package](https://github.com/purescript/purescript/issues/2437)
+- #3493: [Make the compiler package aware](https://github.com/purescript/purescript/issues/3493)
+- #4020: [Replace data structures with tagged arrays](https://github.com/purescript/purescript/issues/4020)
 - #3596: [Constraints and overlapping instances](https://github.com/purescript/purescript/issues/3596)
-- #2980: [Use Math.imul(a, b) instead of a * b | 0 codegen type: breaking change type: enhancement](https://github.com/purescript/purescript/issues/2980)
-- #3580: [Proposal: Named functional dependencies type: enhancement typechecker](https://github.com/purescript/purescript/issues/3580)
-- #3137: [Visible type applications typechecker](https://github.com/purescript/purescript/issues/3137)
-- #4127: [Rethinking data kinds and foreign import data syntax type: breaking change type: enhancement](https://github.com/purescript/purescript/issues/4127)
-- #2922: [Allow case expressions without branches linter syntax type: enhancement](https://github.com/purescript/purescript/issues/2922)
-- #3800: [Add a Prim.Row.Closed compiler solved class type: enhancement typechecker](https://github.com/purescript/purescript/issues/3800)
-- #2206: [Avoid IIFE definitions in generated JavaScript codegen](https://github.com/purescript/purescript/issues/2206)
-- #3103: [Rename Symbol to String type: breaking change typechecker](https://github.com/purescript/purescript/issues/3103)
-- #1279: [Load and type check modules lazily in psci purs repl type: enhancement](https://github.com/purescript/purescript/issues/1279)
-- #2628: [<- support in PSCi purs repl type: enhancement](https://github.com/purescript/purescript/issues/2628)
-- #3967: [Proposal: Take more opportunities to trigger TCO type: enhancement](https://github.com/purescript/purescript/issues/3967)
-- #3662: [Consider changing Char to represent a code point rather than a UTF-16 code unit](https://github.com/purescript/purescript/issues/3662)
-- #1860: [Pattern to ignore all arguments to a data constructor? syntax type: enhancement](https://github.com/purescript/purescript/issues/1860)
-- #1120: [Allow forall in polymorphic instance heads new contributor syntax type: enhancement typechecker](https://github.com/purescript/purescript/issues/1120)
-- #3708: [Feature: local type synonyms type: enhancement](https://github.com/purescript/purescript/issues/3708)
-- #2869: [Implement static pointers codegen syntax type: enhancement](https://github.com/purescript/purescript/issues/2869)
-- #711: [Refactor imperative core AST codegen type: enhancement](https://github.com/purescript/purescript/issues/711)
-- #2975: [Improve errors for recursively-defined type class instances error-message type: enhancement typechecker](https://github.com/purescript/purescript/issues/2975)
-- #687: [Common subexpression elimination codegen optimizer type: enhancement](https://github.com/purescript/purescript/issues/687)
-- #3457: [Boolean Strictness](https://github.com/purescript/purescript/issues/3457)
-- #3613: [ES modules modules type: breaking change](https://github.com/purescript/purescript/issues/3613)
-- #4179: [Changing an instance name can cause a TypeError type: bug](https://github.com/purescript/purescript/issues/4179)
-- #2186: [Reduce frequency of breaking changes to pursuit json format purs publish type: enhancement](https://github.com/purescript/purescript/issues/2186)
-- #2308: [Compiler should persist warnings error-message type: enhancement](https://github.com/purescript/purescript/issues/2308)
-- #2345: [Inlining optimizer type: enhancement](https://github.com/purescript/purescript/issues/2345)
+- #3580: [Proposal: Named functional dependencies](https://github.com/purescript/purescript/issues/3580)
+- #3137: [Visible type applications](https://github.com/purescript/purescript/issues/3137)
+- #4127: [Rethinking data kinds and foreign import data syntax](https://github.com/purescript/purescript/issues/4127)
+- #2922: [Allow case expressions without branches](https://github.com/purescript/purescript/issues/2922)
+- #3800: [Add a Prim.Row.Closed compiler solved class](https://github.com/purescript/purescript/issues/3800)
+- #1279: [Load and type check modules lazily in psci](https://github.com/purescript/purescript/issues/1279)
+- #2628: [<- support in psci](https://github.com/purescript/purescript/issues/2628)
+- #3662: [Change Char to represent a code point rather than a UTF-16 code unit](https://github.com/purescript/purescript/issues/3662)
+- #1860: [Pattern to ignore all arguments to a data constructor](https://github.com/purescript/purescript/issues/1860)
+- #1120: [Allow forall in polymorphic instance heads](https://github.com/purescript/purescript/issues/1120)
+- #3708: [Support local type synonyms](https://github.com/purescript/purescript/issues/3708)
+- #2975: [Improve errors for recursively-defined type class instances](https://github.com/purescript/purescript/issues/2975)
+- #3457: [Boolean strictness](https://github.com/purescript/purescript/issues/3457)
+- #2308: [Compiler should persist warnings](https://github.com/purescript/purescript/issues/2308)
+- #2345: [Inlining optimizer](https://github.com/purescript/purescript/issues/2345)
 - #3842: [Compress source annotations we persist in externs](https://github.com/purescript/purescript/issues/3842)
-- #3182: [Disable constraint syntax in foreign import declarations question syntax type: breaking change](https://github.com/purescript/purescript/issues/3182)
-- #2478: [Allow modules to re-export modules as qualified modules type: enhancement](https://github.com/purescript/purescript/issues/2478)
-- #3375: [Remove warning about shadowed value names? question](https://github.com/purescript/purescript/issues/3375)
-- #3399: [Indicate expected versus actual types in type errors error-message](https://github.com/purescript/purescript/issues/3399)
-- #3948: [Better pattern matching code for generic deriving large sum types](https://github.com/purescript/purescript/issues/3948)
-- #3492: [Support for existentials type: enhancement typechecker](https://github.com/purescript/purescript/issues/3492)
-- #2694: [Simplify long import warnings modules type: enhancement](https://github.com/purescript/purescript/issues/2694)
+- #3182: [Disable constraint syntax in foreign import declarations](https://github.com/purescript/purescript/issues/3182)
+- #2478: [Allow modules to re-export modules as qualified modules](https://github.com/purescript/purescript/issues/2478)
+- #3375: [Remove warning about shadowed value names?](https://github.com/purescript/purescript/issues/3375)
+- #3399: [Indicate expected versus actual types in type errors](https://github.com/purescript/purescript/issues/3399)
+- #3948: [Better pattern matching code for generic deriving in large sum types](https://github.com/purescript/purescript/issues/3948)
+- #3492: [Support for existentials](https://github.com/purescript/purescript/issues/3492)
+- #2694: [Simplify long import warnings modules](https://github.com/purescript/purescript/issues/2694)
 
 Sentiment:
 
@@ -582,30 +560,22 @@ Type: matrix (optional)
 
 PR:
 
-- #4207: [Type-level integers  type: breaking change](https://github.com/purescript/purescript/pull/4207)
-- #3791: [ES modules](https://github.com/purescript/purescript/pull/3791)
-- #4097: [Implement Typeable](https://github.com/purescript/purescript/pull/4097)
+- #4207: [Type-level integers](https://github.com/purescript/purescript/pull/4207)
+- #3791: [ES modules support](https://github.com/purescript/purescript/pull/3791)
 - #3915: [Float compiler-synthesized function applications](https://github.com/purescript/purescript/pull/3915)
-- #4051: [Make forall keyword optional in instance declaration](https://github.com/purescript/purescript/pull/4051)
-- #3619: [replace unknown names with holes in name desugaring](https://github.com/purescript/purescript/pull/3619)
-- #4093: [WIP: CSS variables + dark theme](https://github.com/purescript/purescript/pull/4093)
+- #4051: [Make forall keyword optional in instance declarations](https://github.com/purescript/purescript/pull/4051)
+- #3619: [Replace unknown names with holes in name desugaring](https://github.com/purescript/purescript/pull/3619)
 - #3996: [Update the build cache after building every module](https://github.com/purescript/purescript/pull/3996)
 - #4190: [Color compiler warnings and errors](https://github.com/purescript/purescript/pull/4190)
 - #3446: [Deriving Hashable](https://github.com/purescript/purescript/pull/3446)
-- #4178: [Do not update externs/cache-db when codgenTargets is empty](https://github.com/purescript/purescript/pull/4178)
+- #4178: [Do not update externs/cache-db when codegenTargets is empty](https://github.com/purescript/purescript/pull/4178)
 - #3968: [Trigger TCO even when there are some self references in non-tail positions](https://github.com/purescript/purescript/pull/3968)
-- #4193: [Document MonadSupply and CST Types](https://github.com/purescript/purescript/pull/4193)
 - #3897: [Support local type synonyms natively](https://github.com/purescript/purescript/pull/3897)
-- #4182: [Include function declarations that are referenced by top-level function calls during bundling](https://github.com/purescript/purescript/pull/4182)
-- #4216: [Scope type vars when type checking typed values](https://github.com/purescript/purescript/pull/4216)
-- #4208: [Rewrite Partial optimization to be cleaner](https://github.com/purescript/purescript/pull/4208)
 - #4196: [Can't solve constraints in values which came from constructor binders where the constructor was polymorphic](https://github.com/purescript/purescript/pull/4196)
-- #3715: [show else prefix for instance chain items in docs](https://github.com/purescript/purescript/pull/3715)
+- #3715: [Show else prefix for instance chain items in docs](https://github.com/purescript/purescript/pull/3715)
 - #3824: [Support deriving via](https://github.com/purescript/purescript/pull/3824)
-- #4155: [Fix incomplete type traversals](https://github.com/purescript/purescript/pull/4155)
-- #4222: [Create Gitpod configuration](https://github.com/purescript/purescript/pull/4222)
 - #4092: [New command: purs codegen](https://github.com/purescript/purescript/pull/4092)
-- #4033: [Apply precedence rules to operator sections  type: breaking change](https://github.com/purescript/purescript/pull/4033)
+- #4033: [Apply precedence rules to operator sections](https://github.com/purescript/purescript/pull/4033)
 - #4214: [Support shebang lines in modules](https://github.com/purescript/purescript/pull/4214)
 
 Sentiment:
@@ -626,6 +596,8 @@ Type: matrix (optional)
 
 Activities:
 
+- Asking questions in PureScript community channels (Discord, Discourse)
+- Reading through open source PureScript libraries or applications
 - Reading books or other written material geared towards learning PureScript
 - Watching videos, streams, etc. geared towards learning PureScript
 - Attending an organized training session or course (in person or virtual)
@@ -696,14 +668,12 @@ Type: matrix (optional)
 
 Activities:
 
-- Comment on, contribute to discussion of, or provide edits to an open RFC
-- Create a new thread or comment on internals.purescript-lang.org
-- Discuss the PureScript project in an official chat (either Zulip or Discord)
-- Open an issue on any repo in the purescript GitHub organization
-- Open an issue on any repo in another purescript GitHub organization (web, node, contrib, purerl)
+- Discuss the PureScript project an official community channel (Discord, Discourse)
+- Open or comment on an issue on any repo in the PureScript GitHub organization
+- Open or comment on an issue on any repo in another PureScript GitHub organization (web, node, contrib, purerl)
 - Contribute code changes (including tests) to the PureScript compiler (purescript/purescript)
-- Contribute code changes (including tests) to any other project in the purescript, web, node, contrib or purerl GitHub organizations
-- Contribute non-code changes (documentation, comments, etc.) to any project in the purescript, web, node, contrib or purerl GitHub organization
+- Contribute code changes (including tests) to any other project in the purescript, web, node, or contrib GitHub organizations
+- Contribute non-code changes (documentation, comments, etc.) to any project in the purescript, web, node, or contrib GitHub organizations
 
 Frequency:
 - More frequently than weekly
@@ -725,11 +695,11 @@ Type: matrix
 Activities:
 
 - *Official* PureScript community forums or chats (the PureScript Discourse or the PureScript Discord)
-- *Unofficial* PureScript community forums or chats (e.g., reddit.com/r/purescript, Hacker News, the PureScriptPureScript Zulip, etc.)
+- *Unofficial* PureScript community forums or chats (e.g. reddit.com/r/purescript, Hacker News, the #purescript channel on the FP Slack, etc.)
 - Attending a conference where PureScript is discussed or presented
 - Attending a meetup or local community event where PureScript is discussed or presented
-- Discussion (issues, pull requests, etc.) on a repository *inside* the purescript GitHub organization
-- Discussion (issues, pull requests, etc.) on a repository *outside* of the purescript GitHub organization
+- Discussion (issues, pull requests, etc.) on a repository *inside* the PureScript GitHub organization
+- Discussion (issues, pull requests, etc.) on a repository *outside* of the PureScript GitHub organization
 
 Choices:
 
@@ -749,7 +719,7 @@ Type: matrix (optional)
 Activities:
 
 - *Official* PureScript community forums or chats (the PureScript Discourse or the PureScript Discord)
-- *Unofficial* PureScript community forums or chats (e.g., reddit.com/r/purescript, Hacker News, the PureScriptPureScript Zulip, etc.)
+- *Unofficial* PureScript community forums or chats (e.g., reddit.com/r/purescript, Hacker News, the #purescript channel on the FP Slack, etc.)
 - Attending a conference where PureScript is discussed or presented
 - Attending a meetup or local community event where PureScript is discussed or presented
 - Discussion (issues, pull requests, etc.) on a repository *inside* the purescript GitHub organization
@@ -776,18 +746,13 @@ Type: free form (optional)
 > More detail on the type of situations where people have felt unwelcome can let us better
 > address these issues in the future.
 
-
 ### Please let us know your feeling about the following PureScript community working groups.
 
 Type: matrix (optional)
 
 Group:
 
-- Compiler
-- Community governance
-- Contrib
-- Node
-- Web
+- ES modules
 - Registry
 - Survey
 
@@ -867,7 +832,6 @@ Agriculture, Forestry, Mining [primary sector]
 - Public Service, Social Service
 - Financial Services
 - Professional Services (Law, Consulting, etc.)
-
 
 ### In what technology domain(s) is PureScript used at your company?
 
@@ -955,7 +919,7 @@ Rating:
 
 ### On what cloud platforms does your team deploy PureScript projects?
 
-Type: matrix (optional) FE BE Sys DevOps other
+Type: matrix (optional)
 
 Platform:
 - AWS
