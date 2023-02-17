@@ -15,7 +15,9 @@ survey :: Survey
 survey = Survey
   [ SelectResponse (Question "Do you use PureScript?")
       [ (Option "Yes, I currently use PureScript.")
-      , (Option "No, I don't currently use PureScript, but I have in the past.")
+      , ( Option
+            "No, I don't currently use PureScript, but I hav]e in the past."
+        )
       , (Option "No, I have never used PureScript.")
       ]
   , FreeFormResponse (Question "Why did you start using PureScript?")
@@ -272,45 +274,82 @@ survey = Survey
       (HasOther true)
   , CheckSeveralResponse
       ( Question
-          "To what extent would you like to see the following compiler issues expediently resolved or implemented?"
+          "To what extent would you like to see the following pull requests and issues having to do with _language changes_ expediently resolved?"
       )
-      [ (Option "#2437: Require module names to only be unique per package")
-      , (Option "#3493: Make the compiler package-aware")
-      , (Option "#4020: Replace data structures with tagged arrays")
-      , (Option "#3580: Named functional dependencies")
-      , (Option "#3137: Visible type applications")
-      , (Option "#4127: Let `data` supplant `foreign import data`")
-      , (Option "#2628: Add support for `<-` in psci (purs repl)")
+      [ (Option "PR 4235: Visible type applications")
+      , (Option "PR 3897: Local type synonyms")
+      , (Option "PR 4345: Allow most leading and trailing delimiters")
+      , (Option "PR 3824: Support deriving via")
+      , (Option "PR 4390: Add compilersupport for deriving Debug type class")
+      , (Option "PR 4097: Implement Typeable")
       , ( Option
-            "#3662: Change Char to represent a code point rather than a UTF-16 code unit"
+            "Issue 3662: Consider changing Char to represent a code point rather than a UTF16 code unit"
         )
-      , (Option "#1120: Allow forall in polymorphic instance heads")
-      , (Option "#3708: Support local type synonyms")
       , ( Option
-            "#3457: Boolean strictness: `||` and `&&` unexpectedly have lazy semantics"
+            "Issue 314: Deprecate and eventually remove IsSymbol in favor of the Reflectable type class"
         )
-      , (Option "#2308: The compiler should persist warnings")
-      , ( Option
-            "#2478: Allow modules to re-export modules as qualified modules"
-        )
-      , (Option "#3375: Remove warning about shadowed names")
-      , (Option "#3492: Support for existentials")
-      , (Option "#3939: Allow U+0009 (tab) in source files")
+      , (Option "Issue 4396: Data Type Qualification")
+      , (Option "Issue 127: Rethinking data kinds and foreign import data")
+      , (Option "Compilation changes:")
+      , (Option "PR 4339: More aggressive dirty module checking")
+      , (Option "PR 4407: Remove invalid entries from cachedb")
+      , (Option "Issue 3493: Make the compiler package aware")
       ]
       (HasOther false)
   , CheckSeveralResponse
       ( Question
-          "To what extent would you like to see the following compiler pull requests expediently resolved or implemented?"
+          "To what extent would you like to see the following pull requests and issues having to do with _compilation changes_ expediently resolved?"
       )
-      [ (Option "#4207: Type-level integers")
-      , (Option "#3915: Float compiler-synthesized function applications")
-      , (Option "#4190: Color compiler warnings and errors")
-      , (Option "#3446: Derive Hashable")
-      , (Option "#3824: Support deriving via")
-      , (Option "#4092: New command: purs codegen")
-      , (Option "#4214: Support shebang lines in modules")
+      [ (Option "PR 4339: More aggressive dirty module checking")
+      , (Option "PR 4407: Remove invalid entries from cachedb")
+      , (Option "Issue 3493: Make the compiler package aware")
       ]
       (HasOther false)
+  , CheckSeveralResponse
+      ( Question
+          "To what extent would you like to see the following pull requests and issues having to do with _installation and usage_ expediently resolved?"
+      )
+      [ ( Option
+            "Issue 4191: Make installation/deployment easier on non-Ubuntu Linux environments"
+        )
+      , ( Option
+            "Issue 4106: The compiler integrates the repl runtime environment by default"
+        )
+      , (Option "Issue 1333: Collaborating on improving the REPL evaluator")
+      ]
+      (HasOther false)
+  , CheckSeveralResponse
+      ( Question
+          "To what extent would you like to see the following pull requests and issues having to do with _compiler error reporting_ expediently resolved?"
+      )
+      [ (Option "PR 4421: Better row unification error messages")
+      , (Option "PR 4190: Color compiler warnings and errors")
+      , (Option "Issue 4143: Fold purescriptpsa into purs compile")
+      , ( Option
+            "Issue 4154: Show warning and error statistics at the end of compilations"
+        )
+      , ( Option
+            "Issue 4153: Add strict flag to promote src/ warnings into errors (NOTE: PR 4156, blocked on Issue 3493)"
+        )
+      ]
+      (HasOther false)
+  , CheckSeveralResponse
+      ( Question
+          "To what extent would you like to see the following pull requests and issues having to do with _code generation_ expediently resolved?"
+      )
+      [ ( Option
+            "PR 4284: Emitting value and type information for IDE/IDElike consumers"
+        )
+      , (Option "PR 4092: New command: purs codegen")
+      , ( Option
+            "Issue 4206: Proposal: Move nonJSspecific optimizations to the CoreFn optimization pass"
+        )
+      ]
+      (HasOther false)
+  , FreeFormResponse
+      ( Question
+          "If you had to create one issue on the PureScript issue tracker that does not exist yet, what would the title and a brief description be?"
+      )
   , FreeFormResponse
       ( Question
           "What PureScript backends, if any, would you like to see improved in the next 12 months (ie JS, Erlang, Python, Go)? Why? Would you be comfortable contributing to their maintenance?"
