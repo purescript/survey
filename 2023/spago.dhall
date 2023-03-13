@@ -11,7 +11,15 @@ When creating a new Spago project, you can use
 to generate this file without the comments in this block.
 -}
 { name = "my-project"
-, dependencies = [ "console", "effect", "prelude" ]
+, dependencies =
+  [ "console"
+  , "effect"
+  , "filterable"
+  , "foldable-traversable"
+  , "maybe"
+  , "prelude"
+  , "safe-coerce"
+  ]
 , packages = ./packages.dhall
 , sources = [ "src/**/*.purs" ]
 }
